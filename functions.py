@@ -45,7 +45,7 @@ def func(chromosome_string):
 def maximize(chromosome):
     return max([func(gene) for gene in chromosome.dna])
 
-dictionaries = [binary_range(i) for i in bounds]
+dictionaries = [binary_range(*i) for i in bounds]
 
 ga = GA(func,chromosome_size=n*string_size,population_size=100,genes=['0','1'],generations=100000)
 
